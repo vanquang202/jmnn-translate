@@ -46,7 +46,7 @@ abstract class Translate implements TranslateInterface
         $response = Http::withHeaders($this->__headers())
             ->get($this->config[(new static)->driver()]['URL_LANGUAGES']);
         $this->throwError($response);
-        return $response->json();
+        return $response->json()['data']['languages'];
     }
 
     public function convert($message ,$target = "en")
@@ -60,7 +60,7 @@ abstract class Translate implements TranslateInterface
             ->withHeaders($this->__headers())
             ->post($this->config[(new static)->driver()]['URL_TRANSLATE'],$body);
         $this->throwError($response);
-        return $response->json();
+        return $response->json()['data']['translations'][0]['translatedText'];
     }
 
 }
