@@ -1,0 +1,28 @@
+{
+    "name": "jmnn/translate",
+    "description": "A package build translate",
+    "type": "laravel",
+    "license": "dev",
+    "autoload": {
+        "psr-4": {
+            "Jmnn\\Translate\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "jmnn",
+            "email": "quangvq812@gmail.com"
+        }
+    ],
+    "require": {},
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Jmnn\\Translate\\TranslateServiceProvider"
+            ],
+            "aliases": {
+                "JTranslate" : "Jmnn\\Translate\\TranslateFacade"
+            }
+        }
+    }
+}
