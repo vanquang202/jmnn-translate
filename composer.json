@@ -1,8 +1,7 @@
 {
     "name": "jmnn/translate",
     "description": "A package build translate",
-    "type": "laravel",
-    "license": "dev",
+    "type": "laravel", 
     "autoload": {
         "psr-4": {
             "Jmnn\\Translate\\": "src/"
